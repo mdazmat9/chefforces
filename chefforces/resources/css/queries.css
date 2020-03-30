@@ -1,0 +1,87 @@
+/* big tablet */
+@media only screen and (max-width: 1200px){
+    .hero-text-box{
+    width: 100%;
+    padding: 0 2%;
+}
+    .row{ padding: 0 2%;}
+}
+
+
+
+/* small tabs to big tabs */
+@media only screen and (max-width: 1023px){
+    body{font-size: 18px;}
+    section{padding: 60px,0;}
+    .longcopy{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+
+
+/* small phones to small tabs*/
+@media only screen and (max-width: 767px){
+    body{
+        font-size: 16px;   
+    }
+    section{padding: 30px 0;}
+    .row,.hero-text-box{padding: 0 4%;}
+    .col{width: 100%;
+    margin: 0 0 4% 0;
+    
+    }
+    
+    .main-nav{display: none;} 
+    .mobile-nav-icon{
+        display: inline-block;
+    }
+    .main-nav{
+        float: left;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+    .main-nav li{
+        display: block;
+    }
+    .main-nav li a:link,
+    main-nav li a:visited{
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    
+    .sticky .main-nav{ margin-top: 10px;}
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{padding: 10px 0px;}
+    .sticky .mobile-nav-icon i{color :#555;}
+    .sticky .mobile-nav-icon i{margin-top: 10px;}
+
+    
+    
+    
+    
+    
+    
+    h1{font-size: 180%;}
+    h2{font-size: 25s0%;}
+    
+    .long-copy{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+}
+
+
+
+/* Small Phone from 0 to 480px */
+
+@media only screen and (max-width: 480px){
+    section{
+        padding: 25px 0;
+    }
+    .contact-form{width: 100%;}
+}
