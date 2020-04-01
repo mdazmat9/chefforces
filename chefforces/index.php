@@ -24,6 +24,7 @@ include "includes/NAME.php";
         $_SESSION['outh']=$var['outh'];
         // fillDB();
         // fillcountry();
+        //  fill_language();
     }
 ?>  
  </div>
@@ -41,8 +42,9 @@ include "includes/NAME.php";
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php"><b>Home</b></a></li>
-        <li><a href="login.php"><b>Logout</b></a></li>
         <li><a href="#"><b>Contact us</b></a></li>
+        <li><a href="ide.php"><b>IDE</b></a></li>
+        <li><a href="logout.php"><b>Logout</b></a></li>
       </ul>
     </div>
   </div>

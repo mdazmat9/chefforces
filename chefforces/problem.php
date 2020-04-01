@@ -38,8 +38,9 @@ $sub = $response['result']['data'];
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php"><b>Home</b></a></li>
-        <li><a href="login.php"><b>Logout</b></a></li>
         <li><a href="#"><b>Contact us</b></a></li>
+        <li><a href="ide.php"><b>IDE</b></a></li>
+        <li><a href="logout.php"><b>Logout</b></a></li>
       </ul>
     </div>
   </div>
@@ -70,7 +71,7 @@ $sub = $response['result']['data'];
     ?>
     </h2>
     <h3 style="text-align:right;"> Status : <span style="color:<?php echo $color; ?>;"><?php echo $ac; ?></span>  </h3>
-    <h3 style="text-align:right;"><a  href="submit.php">Submit Solution</a></h3>
+    <h3 style="text-align:right;"><a  href="ide.php">Try on IDE</a></h3>
     <br>
     <?php 
     $text = str_replace("<br>", "", $result['body']);

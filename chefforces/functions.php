@@ -58,6 +58,36 @@ function make_curl_request($url, $post = FALSE, $headers = array())
 ///////////////////////////////////////////////
 //****************API Request ****************
 ///////////////////////////////////////////////
+
+/* IDE  */
+function runCode($config,$oauth_details,$sourceCode,$language,$input){
+    $url = $config['api_endpoint']."ide/run";
+    $headers[] = 'Authorization: Bearer ' . $oauth_details['access_token'];
+    $headers[] = 'content-Type: application/json';
+    $headers[] = 'Accept: application/json';
+    $data=array(
+        'sourceCode' => $sourceCode,
+        'language' => $language,
+        'input' => $input
+    );
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    $response = curl_exec($ch);
+    return $response;
+}
+
+function getstatusofcode($config,$oauth_details,$link){
+    $url = $config['api_endpoint']."ide/status?link=".$link."";
+    $response = make_api_request($oauth_details, $url);
+    return $response;
+}
+
+
+
+/* ranklist */
 function get_ranklist_of_contest_with_pageno($config,$oauth_details,$contest_code,$country,$institution){
     
     $institution = str_replace(" ","%20",$institution);
@@ -70,13 +100,20 @@ function get_ranklist_of_contest_with_pageno($config,$oauth_details,$contest_cod
     $response = make_api_request($oauth_details, $path);
     return $response;
 }
+/* countries */
 function all_contries($config,$oauth_details,$search)
 {
     $path = $config['api_endpoint']."country?search=".$search."&offset=0&limit=100";
     $response = make_api_request($oauth_details, $path);
     return $response;
 }
-
+/* language */
+function all_language($config,$oauth_details)
+{
+    $path = $config['api_endpoint']."language?limit=100";
+    $response = make_api_request($oauth_details, $path);
+    return $response;
+}
 
 
 function get_submission_of_contest($config,$oauth_details,$contest_code){
@@ -218,6 +255,27 @@ function fillcountry(){
         $row=mysqli_query($con,$ex);
     }
 }
+}
+
+function fill_language(){
+    $con=getDBconnection();
+    if(!$con){
+        die('Could not connect');
+    }
+   $tbl=" CREATE TABLE language(
+            name varchar(50) 
+            )";
+    mysqli_query($con,$tbl);
+    $sql="INSERT INTO language (name) VALUES (";
+
+    $result=json_decode(all_language($_SESSION['config'],$_SESSION['outh']),true);
+    foreach($result['result']['data']['content'] as $x){
+        $name=$x['shortName'];
+        // echo $name;
+        $ex=$sql."'".$name."')";
+        mysqli_query($con,$ex);
+    }
+
 }
 
 //main();
