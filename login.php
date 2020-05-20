@@ -5,13 +5,9 @@ include "functions.php";
 if (isset($_POST['login'])) {
 
 	$email = $_POST['email'];
-	$password = $_POST['password'];
+
+    header("Location: index.php");
 	
-	if ($email=="mdazmat9@gmail.com") {
-        header("Location: index.php");
-	} else {
-		$errormsg = "Incorrect Email or Password!!!";
-	}
 }
 ?>
 <?php include "includes/header.php" ?>
@@ -21,20 +17,21 @@ if (isset($_POST['login'])) {
 		<div class="col-md-4 col-md-offset-4 well">
 			<form role="form" action="login.php" method="post" name="loginform">
 				<fieldset>
-					<legend>Login</legend>
+					<legend>Welcome to ChefForces</legend>
 
 					<div class="form-group">
-						<label for="name">Email</label>
-						<input type="text" name="email" placeholder="Your Email" required class="form-control" />
+						<label for="name">Please Enter Your Name</label><h1></h1>
+						<input type="text" name="email" placeholder="Your Name" required class="form-control" />
 					</div>
 
 					<div class="form-group">
-						<label for="name">Password</label>
-						<input type="password" name="password" placeholder="Your Password" required class="form-control" />
+						<label for="name"></label>
+						
+						<!-- <input type="password" name="password" placeholder="Your Password" required class="form-control" /> -->
 					</div>
 
 					<div class="form-group">
-						<input type="submit" name="login" value="Login" class="btn btn-primary" />
+						<input type="submit" name="login" value="Enter" class="btn btn-primary" />
 					</div>
 				</fieldset>
 			</form>

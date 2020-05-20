@@ -22,6 +22,9 @@ include "includes/NAME.php";
         $var=main(); 
         $_SESSION['config']=$var['config'];
         $_SESSION['outh']=$var['outh'];
+        $me = about_me($_SESSION['config'],$_SESSION['outh']);
+        $me = json_decode($me,true);
+        $_SESSION['config']['user_name']=$me['result']['data']['content']['username'];
         // fillDB();
         // fillcountry();
         //  fill_language();
@@ -55,12 +58,12 @@ include "includes/NAME.php";
        <form action="contest.php" class="contests">
             <div class="form-group">
                         <h2><label for="name">Contest</label></h2>
-						<h3>
-						<input type="text" name="q" id="search" placeholder="contest" required class="form-control" />
+            <h3>
+            <input type="text" name="q" id="search" placeholder="contest" required class="form-control" />
                         </h3>
             </div>
             <div class="form-group">
-						<input type="submit" name="login" value="Submit" class="btn btn-primary" />
+            <input type="submit" name="login" value="Submit" class="btn btn-primary" />
             </div>
        </form>
       </div>
