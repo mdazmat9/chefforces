@@ -83,7 +83,7 @@ $problem = $contest['result']['data']['content']['problemsList'];
   </div>
 </nav>
 <div class="row">
-    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['config']['user_name']; ?></b><br><br>
+    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['user_name']; ?></b><br><br>
         
         <!-- <input onclick="goBack()" type="submit" name="goBack()" value="Go back"  /> -->
         <a href="contest.php?q=<?php echo $contestCode;  ?>"> Go back to contest</a>

@@ -24,7 +24,7 @@ include "includes/NAME.php";
         $_SESSION['outh']=$var['outh'];
         $me = about_me($_SESSION['config'],$_SESSION['outh']);
         $me = json_decode($me,true);
-        $_SESSION['config']['user_name']=$me['result']['data']['content']['username'];
+        $_SESSION['user_name']=$me['result']['data']['content']['username'];
         // fillDB();
         // fillcountry();
         //  fill_language();
@@ -52,18 +52,18 @@ include "includes/NAME.php";
     </div>
   </div>
 </nav>
-    <div class="row">Welcome,<b> <?php echo $_SESSION['config']['user_name']; ?></b></div><br>
+    <div class="row">Welcome,<b> <?php echo $_SESSION['user_name']; ?></b></div><br>
     <div class="container">  
       <div class="row">
        <form action="contest.php" class="contests">
             <div class="form-group">
                         <h2><label for="name">Contest</label></h2>
-            <h3>
-            <input type="text" name="q" id="search" placeholder="contest" required class="form-control" />
+						<h3>
+						<input type="text" name="q" id="search" placeholder="contest" required class="form-control" />
                         </h3>
             </div>
             <div class="form-group">
-            <input type="submit" name="login" value="Submit" class="btn btn-primary" />
+						<input type="submit" name="login" value="Submit" class="btn btn-primary" />
             </div>
        </form>
       </div>

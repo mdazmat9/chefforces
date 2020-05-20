@@ -69,7 +69,7 @@ else if($sourceCode!="" && $language!=""){
   </div>
 </nav>
 <div class="row">
-    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['config']['user_name']; ?></b><br><br>
+    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['user_name']; ?></b><br><br>
     </div>
     <div class="col span-1-of-2" style="text-align:right;">
       <a href="contest.php?q=<?php echo $_SESSION['contestCode']; ?>">Back to contest</a>
@@ -143,3 +143,5 @@ else if($sourceCode!="" && $language!=""){
 <?php include "includes/footer.php"; ?>
 </body>
 </html>
+
+

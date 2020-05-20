@@ -62,7 +62,7 @@ $res = $response['result']['data']['content'];
   </div>
 </nav>
 <div class="row">
-    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['config']['user_name']; ?></b><br><br>
+    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['user_name']; ?></b><br><br>
         <a href="contest.php?q=<?php echo $contestCode;  ?>"> Go back to contest</a>
     </div>
 

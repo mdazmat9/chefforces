@@ -55,7 +55,7 @@ $recent=$recent['result']['data']['content'];
   </div>
 </nav>
     <div class="row">
-      <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['config']['user_name']; ?></b>
+      <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['user_name']; ?></b>
       </div>
       <div class="col span-1-of-2" style="text-align:right;">
     <!-- <a href=problem.php?data1=".$x['problemCode']."&data2=".$x['contestCode'].">".$x['problemCode']."</a> -->

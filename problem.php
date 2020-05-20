@@ -46,7 +46,7 @@ $sub = $response['result']['data'];
   </div>
 </nav>
 <div class="row">
-    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['config']['user_name']; ?></b><br><br>
+    <div class="col span-1-of-2">Welcome,<b> <?php echo $_SESSION['user_name']; ?></b><br><br>
     </div>
     <div class="col span-1-of-2" style="text-align:right;">
       <a href="mysubmission.php?contestCode=<?php echo $contestCode; ?>&problemCode=<?php echo $problemCode; ?>">My submission</a><br>

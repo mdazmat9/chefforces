@@ -138,6 +138,11 @@ function get_all_contest($config,$oauth_details){
     $response = make_api_request($oauth_details, $path);
     return $response;
 }
+function about_me($config,$oauth_details){
+    $path = $config['api_endpoint']."users/me";
+    $response = make_api_request($oauth_details, $path);
+    return $response;
+}
 
 
 function get_ACsubmission_of_a_problem($config,$oauth_details,$contest_code,$problem_code){
