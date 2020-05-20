@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
 
 					<div class="form-group">
 						<label for="name"></label>
-						
+						<!-- <p>Nothing</p> -->
 						<!-- <input type="password" name="password" placeholder="Your Password" required class="form-control" /> -->
 					</div>
 
