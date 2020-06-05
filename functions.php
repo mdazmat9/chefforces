@@ -170,8 +170,8 @@ function get_all_submission_of_a_user_on_a_problem_with_pageno($config,$oauth_de
 /////////////////////////////////////////
 
 function main(){
-    $config = array('client_id'=> 'b8b5a43330e5a78b0fcc9706495ef35b',
-        'client_secret' => '5ad4b7714fe7a3c7046f2879d72e317f',
+    $config = array('client_id'=> 'fb4a314c44bd6cbc5c3f4e2316368f83',
+        'client_secret' => '55bacf3780010c75e2cba8eb7754794b',
         'api_endpoint'=> 'https://api.codechef.com/',
         'authorization_code_endpoint'=> 'https://api.codechef.com/oauth/authorize',
         'access_token_endpoint'=> 'https://api.codechef.com/oauth/token',
