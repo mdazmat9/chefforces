@@ -175,8 +175,8 @@ function main(){
         'api_endpoint'=> 'https://api.codechef.com/',
         'authorization_code_endpoint'=> 'https://api.codechef.com/oauth/authorize',
         'access_token_endpoint'=> 'https://api.codechef.com/oauth/token',
-        'redirect_uri'=> 'http://localhost/chefforces/index.php',
-        'website_base_url' => 'http://localhost/chefforces/index.php',
+        'redirect_uri'=> 'http://www.chefforces.me/index.php',
+        'website_base_url' => 'http://www.chefforces.me/index.php',
         'user_name' => 'mdazmat9');
 
     $oauth_details = array('authorization_code' => '',
